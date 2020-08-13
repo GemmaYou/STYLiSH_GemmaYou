@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-168184865-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-168184865-1');
+  </script>
+  <!--- GA end ----------------------------------------->
+  <title>STYLiSH 購物車</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./style/styleCart.css">
+  <script src="https://js.tappaysdk.com/tpdirect/v4"></script>
+</head>
+
+<body>
+  <div class="header">
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/logo.png">
+      </a>
+    </div>
+    <div class="imgs">
+      <div id="searchDiv">
+        <form class="searchGroupMobile" id="searchGroupMobile" action="./" method="get">
+          <input type="text" class="searchInputMobile" id="searchInputMobile" placeholder="Search..." name="keyword">
+          <img src="images/search.png" onmouseover="this.src='images/search-hover.png';" onmouseout="this.src='images/search.png';" class="searchImgMobile" id="searchImgMobile">
+        </form>
+        <form class="searchGroupDesktop" id="searchGroupDesktop" action="./" method="get">
+          <input type="text" class="searchInputDesktop" id="searchInputDesktop" placeholder="Search..." name="keyword">
+          <img src="images/search.png" onmouseover="this.src='images/search-hover.png';" onmouseout="this.src='images/search.png';" class="searchImgDesktop" id="searchImgDesktop">
+        </form>
+      </div>
+      <a href="cart.html" class="cart">
+        <img src="images/cart.png" onmouseover="this.src='images/cart-hover.png';" onmouseout="this.src='images/cart.png';" class="cartImg">
+        <div class="desktopCartQuantity" id="desktopCartQuantity">0</div>
+      </a>
+      <a href="#" onclick="checkLoginState()">
+        <img src="images/member.png" onmouseover="this.src='images/member-hover.png';" onmouseout="this.src='images/member.png';" class="buttonImg">
+      </a>
+    </div>
+    <div class="topList">
+      <a href="#" id="womenProduct">女裝</a>
+      <p>|</p>
+      <a href="#" id="menProduct">男裝</a>
+      <p>|</p>
+      <a href="#" id="accProduct">配飾</a>
+    </div>
+  </div>
+  <div class="headerBar"></div>
+
+
+  <div class="cartLink">HOME>BAG</div>
+  <div class="productCart">
+    <div class="cartTitle" id="cartTitle">
+      <p id="cartP"></p>
+      <p>數量</p>
+      <p>單價</p>
+      <p>小計</p>
+    </div>
+    <div class="productBorder" id="productBorder">
+      <!-- <div class="product">
+         <img class="photo" src="images/main.jpg">
+         <div class="productIntro">
+           <p id="name">前開衩扭結洋裝</p>
+           <p id="id">1234567</p>
+           <div class="colorBox">
+             <div class="boxTitle">顏色</div>
+             <div id="color">白</div></div>
+           <div class="sizeBox">
+             <div class="boxTitle">尺寸</div>
+             <div id="size">M</div></div>
+         </div>
+         <div class="qtyBox">
+           <p class="desktopItem">數量</p>
+           <form>
+             <select class="qtyOption" id="qty" name="productQty">
+               <option value="1">1</option>
+               <option value="2">2</option>
+               <option value="3">3</option>
+               <option value="4">4</option>
+             </select>
+           </form>
+         </div>
+         <div class="priceOneItem">
+           <p class="desktopItem">單價</p>
+           <p>NT.590</p>
+         </div>
+         <div class="priceItemAll">
+           <p class="desktopItem">小計</p>
+           <p>NT.590</p>
+         </div>
+         <img class="removeImg" src="images/cart-remove.png">
+       </div>
+       <div class="product">
+         <img class="photo" src="images/main.jpg">
+         <div class="productIntro">
+           <p id="name">前開衩扭結洋裝</p>
+           <p id="id">1234567</p>
+           <div class="colorBox">
+             <div class="boxTitle">顏色</div>
+             <div id="color">白</div></div>
+           <div class="sizeBox">
+             <div class="boxTitle">尺寸</div>
+             <div id="size">M</div></div>
+         </div>
+         <div class="qtyBox">
+           <p class="desktopItem">數量</p>
+           <form>
+             <select id="qty" name="productQty">
+               <option value="1">1</option>
+               <option value="2">2</option>
+               <option value="3">3</option>
+               <option value="4">4</option>
+             </select>
+           </form>
+         </div>
+         <div class="priceOneItem">
+           <p class="desktopItem">單價</p>
+           <p>NT.590</p>
+         </div>
+         <div class="priceItemAll">
+           <p class="desktopItem">小計</p>
+           <p>NT.590</p>
+         </div>
+         <img class="removeImg" src="images/cart-remove.png">
+       </div> -->
+    </div>
+    <div class="delivery">
+      <div class="delChoice">
+        <div class="delChoiceSub">
+          <p>配送國家</p>
+          <form>
+            <select id="country" name="country">
+              <option value="Taiwan">台灣</option>
+              <option value="surroundingIslands">離島地區</option>
+              <option value="overseas">海外</option>
+            </select>
+          </form>
+        </div>
+        <div class="delChoiceSub">
+          <p>付款方式</p>
+          <form>
+            <select id="payment" name="payment">
+              <option value="home">貨到付款</option>
+              <option value="cvnstore">超取付款</option>
+              <option value="atm">ATM轉帳</option>
+            </select>
+          </form>
+        </div>
+      </div>
+      <div>
+        <p>※ 提醒您：</p>
+        <ul>
+          <li>選擇宅配－請填寫正確收件人資訊，避免包裹配送不達</li>
+          <li>選擇超商－請填寫正確收件人姓名(與證件相符)，避免無法領取
+        </ul>
+      </div>
+    </div>
+    <div class="user">
+      <div class="userTitle">訂購資料</div>
+      <div class="userDesktop" id="userNameDesktop">
+        <p class="userSubtitle">收件人姓名</p>
+        <input type="text" id="deliveryName" placeholder="請輸入姓名">
+      </div>
+      <p class="userNotice">請務必填寫完整收件人姓名，避免包裹無法順利簽收</p>
+      <div class="userDesktop" id="userPhoneDesktop">
+        <p class="userSubtitle">手機</p>
+        <input type="tel" id="deliveryPhone" placeholder="請輸入電話">
+      </div>
+      <div class="userDesktop" id="userEmailDesktop">
+        <p class="userSubtitle">Email</p>
+        <input type="email" id="deliveryEmail" placeholder="請輸入email">
+      </div>
+      <div class="userDesktop" id="userAddressDesktop">
+        <p class="userSubtitle">地址</p>
+        <input type="text" id="deliveryAddress" placeholder="請輸入地址">
+      </div>
+      <div class="delDesktop">
+        <p class="delTimeP">配送時間</p>
+        <form class="delTime">
+          <input type="radio" id="delMorning" name="time" value="8" checked>
+          <p>08:00-12:00</p>
+          <input type="radio" id="delAfternoon" name="time" value="14">
+          <p>14:00-18:00</p>
+          <input type="radio" id="delUndefine" name="time" value="no">
+          <p>不指定</p>
+        </form>
+      </div>
+    </div>
+    <div class="cardInfo">
+      <div class="cardTitle">付款資料</div>
+      <div class="cardDesktop">
+        <p class="cardNumber">信用卡號碼</p>
+        <div class="tpfield" id="card-number"></div>
+      </div>
+      <div class="cardDesktop">
+        <p class="cardDate">有效期限</p>
+        <div class="tpfield" id="card-expiration-date"></div>
+      </div>
+      <div class="cardDesktop">
+        <p class="cardCCV">安全碼</p>
+        <div class="tpfield" id="card-ccv"></div>
+      </div>
+    </div>
+    <div class="total">
+      <div class="totolUpper">
+        <div class="totalItemCost" id="totalItemCost">
+          <p>總金額 NT.</p>
+        </div>
+        <div class="delCost" id="delCost">
+          <p>運費 NT. 30</p>
+        </div>
+      </div>
+      <div class="totalCost" id="totalCost">
+        <p>應付金額 NT.</p>
+      </div>
+      <button class="payButton" id="checkout">確認付款</button>
+    </div>
+  </div>
+
+
+  <footer>
+    <div class="floatList">
+      <a href="cart.html" class="footerCart">
+        <img src="images/cart.png">
+        <p>購物車</p>
+        <div class="mobileCartQuantity" id="mobileCartQuantity">0</div>
+      </a>
+      <p>|</p>
+      <a href="#" onclick="checkLoginState()" id="member2">
+        <img src="images/member.png">
+        <p>會員</p>
+      </a>
+    </div>
+    <div class="buttom">
+      <div class="links">
+        <a href="#">關於 Stylish</a></br>
+        <a href="#">服務條款</a></br>
+        <a href="#">隱私政策</a></br>
+        <a href="#">聯絡我們</a></br>
+        <a href="#" class="FAQ">FAQ</a></br>
+      </div>
+      <div class="icon">
+        <a href="#"><img class="line" src="images/line.png"></a>
+        <a href="#"><img class="fb" src="images/facebook.png"></a>
+        <a href="#"><img class="twitter" src="images/twitter.png"></a>
+      </div>
+      <p>&copy; 2020. All rights reserved.</p>
+    </div>
+  </footer>
+  <div class="loading" id="loading"><img src="images/loading.gif"><div>
+  <script src="./js/cartApp.js"></script>
+  <script src="./js/others.js"></script>
+  <!-- <script src="facebookLogin.js"></script> -->
+</body>
+
+</html>

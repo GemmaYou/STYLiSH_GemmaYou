@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-168184865-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-168184865-1');
+  </script>
+  <!--- GA end ----------------------------------------->
+  <title>STYLiSH 個人資料</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./style/styleProfile.css">
+</head>
+
+<body>
+  <div class="header">
+    <div class="logo">
+      <a href="index.html">
+        <img src="images/logo.png">
+      </a>
+    </div>
+    <div class="imgs">
+      <div id="searchDiv">
+        <form class="searchGroupMobile" id="searchGroupMobile" action="./" method="get">
+          <input type="text" class="searchInputMobile" id="searchInputMobile" placeholder="Search..." name="keyword">
+          <img src="images/search.png" onmouseover="this.src='images/search-hover.png';" onmouseout="this.src='images/search.png';" class="searchImgMobile" id="searchImgMobile">
+        </form>
+        <form class="searchGroupDesktop" id="searchGroupDesktop" action="./" method="get">
+          <input type="text" class="searchInputDesktop" id="searchInputDesktop" placeholder="Search..." name="keyword">
+          <img src="images/search.png" onmouseover="this.src='images/search-hover.png';" onmouseout="this.src='images/search.png';" class="searchImgDesktop" id="searchImgDesktop">
+        </form>
+      </div>
+      <a href="cart.html" class="cart">
+        <img src="images/cart.png" onmouseover="this.src='images/cart-hover.png';" onmouseout="this.src='images/cart.png';" class="cartImg">
+        <div class="desktopCartQuantity" id="desktopCartQuantity">0</div>
+      </a>
+      <a href="#" onclick="checkLoginState()">
+        <img src="images/member.png" onmouseover="this.src='images/member-hover.png';" onmouseout="this.src='images/member.png';" class="buttonImg">
+      </a>
+    </div>
+    <div class="topList">
+      <a href="#" id="womenProduct">女裝</a>
+      <p>|</p>
+      <a href="#" id="menProduct">男裝</a>
+      <p>|</p>
+      <a href="#" id="accProduct">配飾</a>
+    </div>
+  </div>
+  <div class="headerBar"></div>
+
+
+  <div class="main" id="main">
+    <p class="mainP">個人資料</p>
+    <div class="flex">
+      <div>
+        <img class="profileImg" id="profileImg">
+      </div>
+      <div>
+        <p id="profileName"></p>
+        <p id="profileEmail"></p>
+      </div>
+    </div>
+  </div>
+
+
+
+  <footer>
+    <div class="floatList">
+      <a href="cart.html" class="footerCart">
+        <img src="images/cart.png">
+        <p>購物車</p>
+        <div class="mobileCartQuantity" id="mobileCartQuantity">0</div>
+      </a>
+      <p>|</p>
+      <a href="#" onclick="checkLoginState()">
+        <img src="images/member.png">
+        <p>會員</p>
+      </a>
+    </div>
+    <div class="buttom">
+      <div class="links">
+        <a href="#">關於 Stylish</a></br>
+        <a href="#">服務條款</a></br>
+        <a href="#">隱私政策</a></br>
+        <a href="#">聯絡我們</a></br>
+        <a href="#" class="FAQ">FAQ</a></br>
+      </div>
+      <div class="icon">
+        <a href="#"><img class="line" src="images/line.png"></a>
+        <a href="#"><img class="fb" src="images/facebook.png"></a>
+        <a href="#"><img class="twitter" src="images/twitter.png"></a>
+      </div>
+      <p>&copy; 2020. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="./js/profileApp.js"></script>
+  <script src="./js/others.js"></script>
+</body>
+
+</html>

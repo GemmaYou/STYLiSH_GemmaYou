@@ -1,0 +1,576 @@
+*{
+  box-sizing: border-box
+}
+
+html
+body {
+  min-height: 100vh;
+  width: 100vw;
+  margin: 0 auto;
+}
+
+body a {
+  text-decoration: none;
+  color: #f5f5f5;
+}
+
+/* ------------------title-------------------- */
+.header {
+  position: relative;
+  text-align: center;
+}
+
+.topList {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: #FFFFFF;
+  background-color: #272727;
+  font-size: 10px;
+}
+
+ .topList {
+   padding: 0 10px;
+ }
+
+ .topList a:hover {
+   color: #8b572a;
+ }
+
+.logo {
+    margin: 0 auto;
+}
+
+.logo img {
+  width: 15rem;
+  /* height: */
+}
+
+.searchInputMobile form {
+  width: 80%;
+  height: 44px;
+  z-index: 2;
+  position: absolute;
+  top: 5px;
+  right: 44px;
+}
+
+.searchInputMobile {
+  border-radius: 30px;
+  border: 1px solid;
+}
+
+.searchImgMobile {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+.searchGroupDesktop,
+.searchInputMobile,
+.desktopCartQuantity,
+.buttonImg,
+.cartImg {
+  display: none;
+}
+
+.cartImg {
+  padding-bottom: 5px;
+}
+
+.title img {
+  max-height: 80%;
+  max-width: 80%;
+  width: auto;
+  height: auto;
+}
+
+.headerBar {
+  display: none;
+}
+
+/* ------------------product-------------------- */
+
+.main {
+  margin: 50px;
+  padding: 20px 0;
+  height: 70vh;
+}
+
+.flex {
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  text-align: left;
+}
+
+.flex div {
+  margin: 10px;
+}
+
+.mainP {
+  padding-bottom: 10px;
+  border-bottom: 1px solid;
+  margin: 0;
+  font-size: 20px;
+  text-align: center;
+}
+
+/* ------------------footer-------------------- */
+
+.floatList {
+  width: 100vw;
+  background-color: #272727;
+  color: #828282;
+  position: fixed;
+  bottom: 0;
+}
+
+.floatList {
+  display: flex;
+  margin: 0;
+}
+
+.floatList img{
+  width: 44px;
+  height: 44px;
+}
+
+.floatList a {
+  margin: 0 auto;
+  display: flex;
+}
+
+.floatList p{
+  margin: 12px 0;
+}
+
+.floatList a{
+  width: 100px;
+}  /* 用限制寬度確保置中 */
+
+.footerCart {
+  position: relative;
+}
+
+.mobileCartQuantity {
+  position: absolute;
+  top: 17px;
+  left: 20px;
+  text-align: center;
+  color: #FFFFFF;
+  background-color: #eda13b;
+  opacity: 90%;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+}
+
+/* footer {
+  position: absolute;
+  bottom: 0;
+} */
+
+.buttom {
+  width: 100vw;
+  height: 180px;
+  background-color: #272727;
+  padding: 0 10px;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.buttom p {
+  margin-bottom: 50px;
+}
+
+.links{
+  width: 55%;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.links a {
+  margin: 0;
+  padding: 0;
+}
+
+.icon a {
+  margin-left: 5px;
+}
+
+.links a:hover {
+  color:#c49871;
+}
+
+.buttom p {
+  text-align: center;
+  color: #f5f5f5;
+}
+
+
+/* ------------------Media Queries-------------------- */
+
+@media all and (min-width : 900px){
+
+  .searchGroupDesktop {
+    margin: 0 30px;
+  }
+
+  .imgs a{
+    margin: 0 10px
+  }
+
+  .searchImgDesktop {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+  }
+
+  .searchGroupDesktop {
+    display: block;
+  }
+
+  .cartImg {
+    margin: 0;
+  }
+
+}
+
+@media all and (min-width : 768px){
+
+  .header {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .cart {
+    position: relative;
+  }
+
+  .desktopCartQuantity {
+    position: absolute;
+    top: 15px;
+    right: -5px;
+    /* z-index: 2; */
+    color: #FFFFFF;
+    font-size: 20px;
+    background-color: #eda13b;
+    opacity: 90%;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+  }
+
+  .topList {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: #272727;
+    background-color: #FFFFFF;
+    order: -1;
+    margin-right: auto;
+  }
+
+  .topList>* {
+    margin: 0 10px;
+  }
+
+  .topList a {
+    color: #000000;
+    font-size: 20px;
+  }
+
+  .logo {
+    order: -2;
+    margin: 10px;
+  }
+
+  .logo img {
+    width: 20rem;
+  }
+
+  .searchGroupMobile,
+  .searchGroupDesktop {
+    border-radius: 30px;
+    border: 1px solid;
+    width: 160px;
+    height: 50px;
+    z-index: 2;
+    position: absolute;
+    top: 18px;
+    right: 100px;
+  }
+
+  .searchInputDesktop {
+    margin: 10px 10px;
+    height: 30px;
+    width: 130px;
+    cursor: text;
+    white-space: nowrap;
+    z-index: 1;
+    border: none;
+  }
+
+  .headerBar {
+    display: block;
+    height: 37px;
+    background-color: #000000;
+  }
+
+  .imgs {
+    display: flex;
+    align-items: center;
+  }
+
+  .buttonImg,
+  .cartImg {
+    max-width: 44px;
+    max-height: 44px;
+  }
+
+  .cart {
+    position: relative;
+  }
+
+  .desktopCartQuantity {
+    position: absolute;
+  }
+
+  .searchImgDesktop {
+    position: inherit;
+    z-index: 1;
+    max-width: 35px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+  }
+
+  .searchInputDesktop,
+  .desktopCartQuantity,
+  .buttonImg,
+  .cartImg {
+    display: block;
+  }
+
+  .floatList {
+    display: none;
+  }
+
+  .subLinks {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .subLinks a {
+    margin: 10px;
+  }
+
+  footer>* {
+    display: flex;
+    justify-content: space-around;
+    font-size: 10px;
+  }
+
+  .title img {
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+  }
+
+  .buttom {
+    flex-wrap: wrap;
+    height: 150px;
+  }
+
+  .links {
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0 0 0 10px;
+    width: 50%;
+    max-width: 700px;
+  }
+
+  .links br {
+    display: none;
+  }
+
+  .buttom p {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding-left: 10px;
+  }
+
+  .icon{
+    margin-left: auto;
+    padding: 0 10px;
+  }
+
+  .footer {
+    max-height: 100px;
+  }
+
+  .buttom a,
+  .buttom p {
+    font-size: 18px;
+  }
+
+  .icon {
+    padding: 0 8px;
+  }
+
+  .searchGroupMobile {
+    display: none;
+  }
+
+}
+
+
+@media all and (max-width : 900px)  and (min-width: 768px){
+
+  .cartImg {
+    margin-right: 10px;
+  }
+
+  .topList>* {
+    margin: 0 5px;
+    font-size: 15px;
+  }
+
+  .searchGroupMobile,
+  .searchGroupDesktop {
+    width: 130px;
+    height: 40px;
+    z-index: 2;
+    position: absolute;
+    top: 23px;
+    right: 100px;
+  }
+
+  .searchInputDesktop {
+    margin: 5px 5px;
+    height: 25px;
+    width: 110px;
+    position: absolute;
+    top: 3px;
+    right: 5px;
+    z-index: 1;
+  }
+
+  .searchGroupDesktop {
+    margin: 0;
+  }
+
+  .imgs a{
+    margin: 0 5px
+  }
+
+  .buttonImg,
+  .cartImg {
+    max-width: 30px;
+    max-height: 30px;
+  }
+
+  .searchImgDesktop {
+    /* position: inherit;
+    z-index: 1; */
+    max-width: 25px;
+    z-index: 1;
+  }
+
+  .cart {
+    position: relative;
+  }
+
+  .desktopCartQuantity {
+    position: absolute;
+    top: 11px;
+    right: 3px;
+    /* z-index: 2; */
+    color: #FFFFFF;
+    font-size: 16px;
+    background-color: #eda13b;
+    opacity: 90%;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+  }
+
+  .links a,
+  .icon {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .links {
+    width: 50%;
+  }
+
+  .buttom a,
+  .buttom p {
+    font-size: 15px;
+  }
+
+  .searchGroupDesktop {
+    display: block;
+  }
+
+}
+
+@media all and (max-width : 767px)  and (min-width: 500px){
+
+  .buttom {
+    padding: 20px 0 0 10px;
+  }
+
+  .links {
+    height: 110px;
+  }
+
+  .links,
+  .icon {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+}
+
+@media all and (max-width : 500px){
+
+  .logo img {
+    /* max-width: 10rem; */
+    height: 44px;
+  }
+
+  .searchImgMobile {
+    width: 44px;
+  }
+
+  .floatList a {
+    font-size: 10px;
+  }
+
+  .buttom {
+    font-size: 10px;
+    padding: 20px 0 0 10px;
+  }
+
+  .links {
+    height: 100px;
+  }
+
+  .mobileCartQuantity {
+    font-size: 16px;
+  }
+
+}

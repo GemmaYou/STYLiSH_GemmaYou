@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <!-- Global site tag (gtag.js) - Google Analytics -->
+   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-168184865-1"></script>
+   <script>
+     window.dataLayer = window.dataLayer || [];
+
+     function gtag() {
+       dataLayer.push(arguments);
+     }
+     gtag('js', new Date());
+
+     gtag('config', 'UA-168184865-1');
+   </script>
+   <!--- GA end ----------------------------------------->
+   <title>STYLiSH</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1" >
+   <link rel="stylesheet" href="./style/styleProduct.css">
+ </head>
+ <body>
+   <div class="header">
+     <div class="logo">
+       <a href="index.html">
+         <img src="images/logo.png">
+       </a>
+     </div>
+     <div class="imgs">
+       <div id="searchDiv">
+         <form class="searchGroupMobile" id="searchGroupMobile" action="./" method="get">
+           <input type="text" class="searchInputMobile" id="searchInputMobile" placeholder="Search..." name="keyword">
+           <img src="images/search.png" onmouseover="this.src='images/search-hover.png';" onmouseout="this.src='images/search.png';" class="searchImgMobile" id="searchImgMobile">
+         </form>
+         <form class="searchGroupDesktop" id="searchGroupDesktop" action="./" method="get">
+           <input type="text" class="searchInputDesktop" id="searchInputDesktop" placeholder="Search..." name="keyword">
+           <img src="images/search.png" onmouseover="this.src='images/search-hover.png';" onmouseout="this.src='images/search.png';" class="searchImgDesktop" id="searchImgDesktop">
+         </form>
+       </div>
+       <a href="cart.html" class="cart">
+         <img src="images/cart.png" onmouseover="this.src='images/cart-hover.png';" onmouseout="this.src='images/cart.png';" class="cartImg">
+         <div class="desktopCartQuantity" id="desktopCartQuantity">0</div>
+       </a>
+       <a href="#" onclick="checkLoginState()">
+         <img src="images/member.png" onmouseover="this.src='images/member-hover.png';" onmouseout="this.src='images/member.png';" class="buttonImg">
+       </a>
+     </div>
+     <div class="topList">
+       <a href="#" id="womenProduct">女裝</a>
+       <p>|</p>
+       <a href="#" id="menProduct">男裝</a>
+       <p>|</p>
+       <a href="#" id="accProduct">配飾</a>
+     </div>
+   </div>
+   <div class="headerBar"></div>
+   <div class="product" id="product">
+       <!-- <div class="productIntroOverall">
+         <div class="productPhotoDiv">
+           <img src="images/main.jpg" class="productPhoto">
+         </div>
+         <div class="productIntroBase">
+           <p class="productName">前開衩扭結洋裝</p>
+           <p class="productId">03040047</p>
+           <p class="productPrice">TWD.590</p>
+           <hr/>
+           <div class="productColors">
+             <p>顏色 |</p>
+             <div class="colorBorder"><div class="color"></div></div>
+            <div class="colorBorder"><div class="color"></div></div>
+           </div>
+           <div class="productSizes">
+             <p>尺寸 |</p>
+             <button class="productSize">S</button>
+             <button class="productSize">M</button>
+             <button class="productSize">L</button>
+             <button class="productSize">XL</button>
+           </div>
+           <div class="productCounterGroup">
+             <p class="productCounterP">數量 |</p>
+             <div class="productCounter">
+               <button type="button" name="button" class="minus">-</button>
+               <p class="productQuantity">1</p>
+               <button type="button" name="button" class="plus">+</button>
+             </div>
+           </div>
+           <button class="sizeChoice">請選擇尺寸</button>
+           <div class="productIntro">
+             *實際顏色依單品照為主<br/>
+             <br/>
+             棉100%<br/>
+             厚薄：薄<br/>
+             <br/>
+             素材產地/中國<br/>
+             加工產地/中國<br/>
+             實際待商品圖要用的，跟模板不同所以先comment
+             <p class="introNote">*實際顏色依單品照為主</p><br/>
+             <p class="introTexture">棉100%</p><br>
+             <p class="introWash"></p><br/>
+             <p class="introPlace">素材產地中國</p><br/>
+             <p class="introStory"></p><br/>
+           </div>
+         </div>
+       </div>
+       <div class="productDetail">
+         <div class="productDetailHead">
+           <div class="productDetailHeadP">
+             <p>細節說明</p>
+           </div>
+           <div class="productDetailLine"></div>
+         </div>
+         <p class="productDetailParagraph">O.N.S is all about options, which is why we took our staple polo shirt and upgraded it with slubby linen jersey, making it even lighter gor those who prefer their summer style extra-breezy.O.N.S is all about options, which is why we took our staple polo shirt and upgraded it with slubby linen jersey, making it even lighter gor those who prefer their summer style extra-breezy.O.N.S is all about options, which is why we took our staple polo shirt and upgraded it with slubby linen jersey, making it even lighter gor those who prefer their summer style extra-breezy.</p>
+         <div class="productPhotoBelow">
+           <img src="images/main.jpg">
+         </div>
+         <p class="productDetailParagraph">O.N.S is all about options, which is why we took our staple polo shirt and upgraded it with slubby linen jersey, making it even lighter gor those who prefer their summer style extra-breezy.</p>
+         <div class="productPhotoBelow">
+           <img src="images/main.jpg">
+         </div>
+       </div> -->
+   </div>
+
+   <footer>
+     <div class="floatList">
+       <a href="cart.html" class="footerCart">
+         <img src="images/cart.png">
+         <p>購物車</p>
+         <div class="mobileCartQuantity" id="mobileCartQuantity">0</div>
+       </a>
+       <p>|</p>
+       <a href="#" onclick="checkLoginState()">
+         <img src="images/member.png">
+         <p>會員</p>
+       </a>
+     </div>
+     <div class="buttom">
+       <div class="links">
+         <a href="#">關於 Stylish</a></br>
+         <a href="#">服務條款</a></br>
+         <a href="#">隱私政策</a></br>
+         <a href="#">聯絡我們</a></br>
+         <a href="#" class="FAQ">FAQ</a></br>
+       </div>
+       <div class="icon">
+         <a href="#"><img class="line" src="images/line.png"></a>
+         <a href="#"><img class="fb" src="images/facebook.png"></a>
+         <a href="#"><img class="twitter" src="images/twitter.png"></a>
+       </div>
+       <p>&copy; 2020. All rights reserved.</p>
+   </div>
+   </footer>
+   <script src="./js/others.js"></script>
+   <script src="./js/productApp.js"></script>
+   <script src="./js/facebookLogin.js"></script>
+ </body>
+</html>
