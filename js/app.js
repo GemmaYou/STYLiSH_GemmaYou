@@ -92,8 +92,7 @@ function productDataRender(response){
   }
 
   for (let i=0; i<response.data.length; i++){
-    let productDiv = document.createElement("div");
-    // let productImgA = document.createElement("a");
+    let productDiv = document.createElement("a");
     let productImg = document.createElement("img");
     let productIntro = document.createElement("div");
     let productColors = document.createElement("div");
@@ -105,7 +104,7 @@ function productDataRender(response){
     productColors.className = "colors";
 
     productTitle.innerHTML = response.data[i].title;
-    productTitle.href = "./product.html?id="+response.data[i].id;
+    productDiv.href = "./product.html?id="+response.data[i].id;
     productPrice.innerHTML = "NTD. "+response.data[i].price;
     productImg.src = response.data[i].main_image;
 

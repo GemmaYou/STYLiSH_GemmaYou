@@ -32,7 +32,7 @@ function header(){
           tempImg.className = "headPhoto";
           imgSrc = document.createElement("img");
           imgSrc.src = "https://api.appworks-school.tw/" + jsonHeader.data[i].picture;
-          tempImg.href = "https://api.appworks-school.tw/" + jsonHeader.data[i].product_id;
+          tempImg.href = "https://gemmayou.github.io/STYLiSH_GemmaYou/product.html?id=" + jsonHeader.data[i].product_id;
           tempImg.appendChild(imgSrc);
           tempSlider.appendChild(tempWords);
           tempSlider.appendChild(tempImg);
