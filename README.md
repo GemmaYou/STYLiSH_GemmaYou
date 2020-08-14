@@ -26,3 +26,6 @@ STYLiSH is an E-commerce website which makes users can easily shop online.
 
 ### Checkout
 ![checkout.gif](https://github.com/GemmaYou/photo/raw/master/stylish_gif/checkout.gif)
+
+### RWD
+![RWD.gif](https://github.com/GemmaYou/photo/raw/master/stylish_gif/RWD.gif)
